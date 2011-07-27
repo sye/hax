@@ -1,0 +1,59 @@
+area.cpp: In destructor hax::Area::~Area():
+area.cpp:28: warning: possible problem detected in invocation of delete operator:
+area.cpp:28: warning: invalid use of incomplete type struct hax::Obstacle
+route.h:8: warning: forward declaration of struct hax::Obstacle
+area.cpp:28: note: neither the destructor nor the class-specific operator delete will be called, even if they are declared when the class is defined.
+
+
+
+./hax_debug
+*** glibc detected *** ./hax_debug: double free or corruption (fasttop): 0x0000000000abb540 ***
+======= Backtrace: =========
+/lib/libc.so.6(+0x775b6)[0x2ba7ac0135b6]
+/lib/libc.so.6(cfree+0x73)[0x2ba7ac019e83]
+./hax_debug[0x40b359]
+./hax_debug[0x40a584]
+./hax_debug[0x409f98]
+./hax_debug[0x40963d]
+./hax_debug[0x40864d]
+./hax_debug[0x409036]
+./hax_debug[0x4081ce]
+./hax_debug[0x4075a4]
+./hax_debug[0x401b1d]
+./hax_debug[0x4014b8]
+/lib/libc.so.6(__libc_start_main+0xfd)[0x2ba7abfbac4d]
+./hax_debug[0x4013e9]
+======= Memory map: ========
+00400000-00414000 r-xp 00000000 00:14 936976620                          /afs/nada.kth.se/home/i/u1pj2kvi/cprog10/lab3/hax/hax_debug
+00613000-00614000 r--p 00013000 00:14 936976620                          /afs/nada.kth.se/home/i/u1pj2kvi/cprog10/lab3/hax/hax_debug
+00614000-00615000 rw-p 00014000 00:14 936976620                          /afs/nada.kth.se/home/i/u1pj2kvi/cprog10/lab3/hax/hax_debug
+00abb000-00adc000 rw-p 00000000 00:00 0                                  [heap]
+2ba7ab5cb000-2ba7ab5eb000 r-xp 00000000 09:00 1507550                    /lib/ld-2.11.1.so
+2ba7ab5eb000-2ba7ab5ed000 rw-p 00000000 00:00 0 
+2ba7ab7ea000-2ba7ab7eb000 r--p 0001f000 09:00 1507550                    /lib/ld-2.11.1.so
+2ba7ab7eb000-2ba7ab7ec000 rw-p 00020000 09:00 1507550                    /lib/ld-2.11.1.so
+2ba7ab7ec000-2ba7ab7ed000 rw-p 00000000 00:00 0 
+2ba7ab7ed000-2ba7ab8e3000 r-xp 00000000 09:00 6137401                    /usr/lib/libstdc++.so.6.0.13
+2ba7ab8e3000-2ba7abae3000 ---p 000f6000 09:00 6137401                    /usr/lib/libstdc++.so.6.0.13
+2ba7abae3000-2ba7abaea000 r--p 000f6000 09:00 6137401                    /usr/lib/libstdc++.so.6.0.13
+2ba7abaea000-2ba7abaec000 rw-p 000fd000 09:00 6137401                    /usr/lib/libstdc++.so.6.0.13
+2ba7abaec000-2ba7abb01000 rw-p 00000000 00:00 0 
+2ba7abb01000-2ba7abb83000 r-xp 00000000 09:00 1507424                    /lib/libm-2.11.1.so
+2ba7abb83000-2ba7abd82000 ---p 00082000 09:00 1507424                    /lib/libm-2.11.1.so
+2ba7abd82000-2ba7abd83000 r--p 00081000 09:00 1507424                    /lib/libm-2.11.1.so
+2ba7abd83000-2ba7abd84000 rw-p 00082000 09:00 1507424                    /lib/libm-2.11.1.so
+2ba7abd84000-2ba7abd85000 rw-p 00000000 00:00 0 
+2ba7abd85000-2ba7abd9b000 r-xp 00000000 09:00 1507399                    /lib/libgcc_s.so.1
+2ba7abd9b000-2ba7abf9a000 ---p 00016000 09:00 1507399                    /lib/libgcc_s.so.1
+2ba7abf9a000-2ba7abf9b000 r--p 00015000 09:00 1507399                    /lib/libgcc_s.so.1
+2ba7abf9b000-2ba7abf9c000 rw-p 00016000 09:00 1507399                    /lib/libgcc_s.so.1
+2ba7abf9c000-2ba7ac116000 r-xp 00000000 09:00 1507731                    /lib/libc-2.11.1.so
+2ba7ac116000-2ba7ac315000 ---p 0017a000 09:00 1507731                    /lib/libc-2.11.1.so
+2ba7ac315000-2ba7ac319000 r--p 00179000 09:00 1507731                    /lib/libc-2.11.1.so
+2ba7ac319000-2ba7ac31a000 rw-p 0017d000 09:00 1507731                    /lib/libc-2.11.1.so
+2ba7ac31a000-2ba7ac322000 rw-p 00000000 00:00 0 
+2ba7b0000000-2ba7b0021000 rw-p 00000000 00:00 0 
+2ba7b0021000-2ba7b4000000 ---p 00000000 00:00 0 
+7fffed08c000-7fffed0a1000 rw-p 00000000 00:00 0                          [stack]
+7fffed160000-7fffed161000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]

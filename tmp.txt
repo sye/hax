@@ -1,0 +1,9 @@
+map<string,map> cmd; //a "fnc" that chooses "fnc"
+
+cmd has predefined number of arguments (and type) and from witch member (if any) it origins
+examples are:
+general: map<string,(Class::*)(arg1,arg2,...,argn)>
+walk: map<string,(Hero::*)(Hero,Direction)> //is this a memberfunktion ??
+
+hax_debug: malloc.c:3096: sYSMALLOc: Assertion `(old_top == (((mbinptr) (((char *) &((av)->bins[((1) - 1) * 2])) - __builtin_offsetof (struct malloc_chunk, fd)))) && old_size == 0) || ((unsigned long) (old_size) >= (unsigned long)((((__builtin_offsetof (struct malloc_chunk, fd_nextsize))+((2 * (sizeof(size_t))) - 1)) & ~((2 * (sizeof(size_t))) - 1))) && ((old_top)->size & 0x1) && ((unsigned long)old_end & pagemask) == 0)' failed.
+

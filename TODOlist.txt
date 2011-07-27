@@ -1,0 +1,42 @@
+fkner som måste skrivas:
+- Character::action
+- Character::talk_to
+- Area::level_up (virtual), man kan göra att olika värden hos aktörer går upp efter strider man vunnit på olika ställen, det blir 2 flugor i en smäll :)
+- Container::add/remove (hur använder man add och remove via Character?)
+
+klasser som måste skrivas:
+- gör Container till en template!!!!!!!!!!!!!!!
+då kan Wallet vara "Wallet : public Container<Coin>", låt template argument default vara Object
+
+- några fler miljöer
+- Obstacle, must be able to get rid of an obstacle in some way!!!!!!!
+
+
+sen kan man ju göra enter och leave virtual men jag vet inte hur intressant man kan göra det (och hur bra det kommer gå)
+
+
+För Object kan man ha en virtuell fkn i BreakableContainer där den går sönder
+if(!Container::add(Object*)){
+break();
+}
+
+* några av värdena för varje aktör ska variera över spelets gång, just nu är det bara Wizard som får mindre MP
+
+
+* Låt valen bero på var de är, vem de har i närheten och hur starka deras egenskaper är.
+Exempel: ett skadat troll letar mat, ett friskt troll springer runt slumpmässigt, ett troll i närheten av en människa blir argt.
+
+implementera med If-satser i action()?
+
+* slumpgenerator för en mängd saker (gör vi sist för lättare debugging)
+
+
+
+
+
+TESTA HELA PENGASYSTEMET!!!!!!!!11111
+
+
+
+
+
